@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="public/assets/carrot.svg"
+        >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pflanzen-Guide – Nachbarsgarten</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        >
+        <link rel="stylesheet" href="src/css/basic.css">
+        <link rel="stylesheet" href="src/css/guide.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+        <header class="header">
+            <nav class="nav nav--desktop" aria-label="Hauptnavigation">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--left"><a
+                            class="nav__link"
+                            href="#"
+                            aria-current="page"
+                        >Unser Pflanzen - Guide</a></li>
+                    <li class="nav__item nav__item--middle" id="website-logo-desktop"><a class="nav__link" href="index.html">Nachbarsgarten</a></li>
+                    <li class="nav__item nav__item--right"><a class="nav__link" href="index.html#community">Unsere Garten - Map</a></li>
+                    <li class="nav__item nav__item--right"><a class="nav__link" href="contact.html">Mitmachen</a></li>
+                </ul>
+            </nav>
+            <nav class="nav nav--mobile" aria-label="Hauptnavigation">
+                <a
+                    class="nav__link"
+                    id="website-logo-mobile"
+                    href="index.html"
+                >Nachbarsgarten</a>
+                <button
+                    class="nav__menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    aria-label="Menü öffnen"
+                >
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+                <div
+                    class="nav__menu"
+                    id="mobile-menu"
+                    hidden
+                >
+                    <button
+                        class="nav__menu-toggle nav__menu-toggle--close"
+                        id="menu-close"
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls="mobile-menu"
+                        aria-label="Menü schließen"
+                    >
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="index.html#community">Unsere Garten - Map</a></li>
+                        <li class="nav__item"><a class="nav__link" href="src/html/contact.html">Mitmachen</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Unser Pflanzen - Guide</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="guide__main" id="main-content">
+
+            <section class="intro">
+                <h1>Unser Pflanzen - Guide</h1>
+                <p>Was kann ich wann pflanzen, und was ist gerade reif? In unserem Guide findest du für jeden Monat eine kleine Übersicht mit Aussaat, Pflanzung und Ernte. So behältst du den Überblick, ob du AnfängerIn oder alter Hase bist, und deine Beete tragen von Frühjahr bis Winter.</p>
+            </section>
+
+            <section class="cards__container">
+                <div class="cards__item">
+                    <h2>September</h2>
+                    <h3>Was kann gepflanzt werden?</h3>
+                    <ul>
+                        <li>Feldsalat</li>
+                        <li>Spinat</li>
+                        <li>Radieschen</li>
+                        <li>Rucola</li>
+                    </ul>
+                    <h3>Was kann geerntet werden?</h3>
+                    <ul>
+                        <li>Tomaten</li>
+                        <li>Zucchini</li>
+                        <li>Kürbisse</li>
+                        <li>Buschbohnen</li>
+                    </ul>
+                    <p>Der Sommer klingt aus, doch im Beet ist noch viel los. Jetzt ist die beste Zeit, schnell wachsendes Blattgemüse für den Herbst auszusäen, während Tomaten, Zucchini und Kürbisse noch reichlich Ernte bringen.</p>
+                </div>
+
+                <div class="cards__item">
+                    <h2>Oktober</h2>
+                    <h3>Was kann gepflanzt werden?</h3>
+                    <ul>
+                        <li>Knoblauch</li>
+                        <li>Steckzwiebeln</li>
+                        <li>Feldsalat</li>
+                        <li>Winterspinat</li>
+                    </ul>
+                    <h3>Was kann geerntet werden?</h3>
+                    <ul>
+                        <li>Kürbisse</li>
+                        <li>Rote Bete</li>
+                        <li>Möhren</li>
+                        <li>Mangold</li>
+                    </ul>
+                    <p>Jetzt wird die Ernte eingefahren und das Beet für das nächste Jahr vorbereitet. Knoblauch und Zwiebeln, die jetzt in die Erde kommen, überwintern und starten im Frühjahr gleich durch.</p>
+                </div>
+
+                <div class="cards__item">
+                    <h2>November</h2>
+                    <h3>Was kann gepflanzt werden?</h3>
+                    <ul>
+                        <li>Knoblauch</li>
+                        <li>Rhabarber</li>
+                        <li>Beerensträucher</li>
+                        <li>Frühlingsblumenzwiebeln</li>
+                    </ul>
+                    <h3>Was kann geerntet werden?</h3>
+                    <ul>
+                        <li>Grünkohl</li>
+                        <li>Rosenkohl</li>
+                        <li>Feldsalat</li>
+                        <li>Lauch</li>
+                    </ul>
+                    <p>Auch wenn es draußen kälter wird, bleibt der Garten nicht leer. Grünkohl und Rosenkohl schmecken nach dem ersten Frost sogar besonders gut, und mit Sträuchern und Zwiebeln legst du schon jetzt den Grundstein für das nächste Gartenjahr.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__cta">
+                <div class="footer__cta-content">
+                    <strong class="font-color--dark">Du willst mitmachen?</strong> Dann meld' dich bei uns!
+                    <a class="footer__link footer__button" href="src/html/contact.html">
+                        Mitmachen
+                    </a>
+                </div>
+            </div>
+            <div class="footer__widget">
+                <div class="footer__widget-column">
+                    <h3 class="font-color--light">Nachbarsgarten</h3>
+                    <p class="font-color--light">Musteradresse 123, 00000 Musterort</p>
+                    <p class="font-color--light">Email: <a class="footer__link" href="#">kontakt@nachbarsgarten.de</a></p>
+                    <p class="font-color--light">Tel.: <a class="footer__link" href="#">0123456789</a></p>
+                </div>
+                <div class="footer__widget-column">
+                    <h3 class="font-color--light">Rechtliches</h3>
+                    <p class="font-color--light"><a class="footer__link" href="#">Impressum</a></p>
+                    <p class="font-color--light"><a class="footer__link" href="#">Datenschutz</a></p>
+                </div>
+                <div class="footer__widget-column">
+                    <h3 class="font-color--light">Social Media</h3>
+                    <div class="footer__social">
+                        <a
+                            class="footer__link"
+                            href="#"
+                            aria-label="Nachbarsgarten auf Facebook"
+                        ><i class="fa-brands fa-facebook"></i></a>
+                        <a
+                            class="footer__link"
+                            href="#"
+                            aria-label="Nachbarsgarten auf LinkedIn"
+                        ><i class="fa-brands fa-linkedin"></i></a>
+                        <a
+                            class="footer__link"
+                            href="#"
+                            aria-label="Nachbarsgarten auf Instagram"
+                        ><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="src/js/basic.js"></script>
+        <script src="src/js/guide.js"></script>
+    </body>
+</html>

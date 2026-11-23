@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="public/assets/carrot.svg"
+        >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nachbarsgarten</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        >
+        <link rel="stylesheet" href="src/css/basic.css">
+        <link rel="stylesheet" href="src/css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+        <header class="header">
+            <nav class="nav nav--desktop" aria-label="Hauptnavigation">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--left"><a class="nav__link" href="guide.html">Unser Pflanzen - Guide</a></li>
+                    <li class="nav__item nav__item--middle" id="website-logo-desktop"><a class="nav__link" href="#">Nachbarsgarten</a></li>
+                    <li class="nav__item nav__item--right"><a class="nav__link" href="#community">Unsere Garten - Map</a></li>
+                    <li class="nav__item nav__item--right"><a class="nav__link" href="contact.html">Mitmachen</a></li>
+                </ul>
+            </nav>
+            <nav class="nav nav--mobile" aria-label="Hauptnavigation">
+                <a
+                    class="nav__link"
+                    id="website-logo-mobile"
+                    href="#"
+                >Nachbarsgarten</a>
+                <button
+                    class="nav__menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    aria-label="Menü öffnen"
+                >
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+                <div
+                    class="nav__menu"
+                    id="mobile-menu"
+                    hidden
+                >
+                    <button
+                        class="nav__menu-toggle nav__menu-toggle--close"
+                        id="menu-close"
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls="mobile-menu"
+                        aria-label="Menü schließen"
+                    >
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="#community">Unsere Garten - Map</a></li>
+                        <li class="nav__item"><a class="nav__link" href="src/html/contact.html">Mitmachen</a></li>
+                        <li class="nav__item"><a class="nav__link" href="src/html/guide.html">Unser Pflanzen - Guide</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="index__main" id="main-content">
+            <h1 class="sr-only">Nachbarsgarten</h1>
+
+            <section class="hero" aria-labelledby="hero-title">
+                <h2 class="sr-only" id="hero-title">Willkommen beim Nachbarsgarten</h2>
+                <div class="hero__logo">
+                    <img src="/public/assets/logo_reg.svg" alt="Nachbarsgarten-Logo">
+                </div>
+            </section>
+
+            <section class="about" aria-label="Über uns">
+                <div class="scroll__container">
+                    <div class="scroll__viewport">
+                        <div class="scroll__item scroll__item--active">
+                            <div class="card">
+                                <div class="card__column">
+                                    <h2>Was ist Nachbarsgarten?</h2>
+                                    <p>Nachbarsgarten bringt Menschen zusammen, die gerne gärtnern, aber nicht genug Platz haben, und Menschen, die einen Garten besitzen, ihn aber nicht mehr allein bewirtschaften möchten. Wir vermitteln ungenutzte Gartenflächen in der Nachbarschaft an alle, die Lust haben, selbst anzubauen, zu pflanzen und zu ernten.</p>
+                                    <p>So entsteht mehr als nur Gemüse: Wir teilen Wissen, Saatgut und Ernte miteinander. Man lernt die Menschen von nebenan kennen und gibt Gärten ein neues Leben.</p>
+                                </div>
+                                <div class="card__column">
+                                    <img src="./public/pictures/pic.jpg" alt="Bild eines Garten: Jemand platziert Gemüse in einen Korb">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll__item">
+                            <div class="card card--reverse">
+                                <div class="card__column">
+                                    <h2 class="font-color--light">Wer ist Nachbarsgarten?</h2>
+                                    <p class="font-color--light">Wir sind Elfriede Muster und Sabine Mustermann, Gründer- und Nachbarinnen, die eine Leidenschaft teilen: Gärten, in denen etwas wächst und Menschen zusammen bringen. Die einen besitzen ein Stück Land und freuen sich über Unterstützung, die anderen haben Zeit, Ideen und grüne Daumen, aber keinen eigenen Garten.</p>
+                                    <p class="font-color--light">Aus dieser Idee ist eine lebendige Gemeinschaft geworden, in der man sich austauscht, gegenseitig hilft und voneinander lernt. Bei uns ist jede und jeder willkommen, ganz gleich ob Anfänger oder alter Hase, denn gute Nachbarschaft fängt manchmal ganz einfach über dem Gartenzaun an.</p>
+                                </div>
+                                <div class="card__column">
+                                    <img src="./public/pictures/pic12.jpg" alt="Bild der Gründerinnen des Nachbarsgarten: Elfriede Muster (links) und Sabine Mustermann (rechts)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll__item">
+                            <div class="card">
+                                <div class="card__column">
+                                    <h2 class="font-color--light">Was ist unser Ziel?</h2>
+                                    <p class="font-color--light">Wir möchten brachliegende Gärten wieder zum Leben erwecken und Menschen in der Nachbarschaft zusammenbringen. Jede Fläche, die bepflanzt wird, ist ein Gewinn für die Natur, für den Geldbeutel und für das Miteinander vor Ort.</p>
+                                    <p class="font-color--light">Dabei geht es uns um mehr als die Ernte. Wir wollen Wissen weitergeben, regional und nachhaltig anbauen und zeigen, wie viel möglich ist, wenn viele Hände mit anpacken. Denn ein Garten wächst am besten, wenn man ihn gemeinsam pflegt.</p>
+                                </div>
+                                <div class="card__column">
+                                    <img src="public/pictures/pic11.jpg" alt="Zwei Personen pflanzen junge Setzlinge in ein vorbereitetes Hochbeet">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="community"
+                id="community"
+                aria-labelledby="community-title"
+            >
+                <h2 class="headline__h2" id="community-title">Unsere Garten - Community</h2>
+                <div class="community__map" id="map"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__cta">
+                <div class="footer__cta-content">
+                    <strong>Du willst mitmachen?</strong> Dann meld' dich bei uns!
+                    <a class="footer__link footer__button" href="src/html/contact.html">
+                        Mitmachen
+                    </a>
+                </div>
+            </div>
+            <div class="footer__widget">
+                <div class="footer__widget-column">
+                    <h3 class="font-color--light">Nachbarsgarten</h3>
+                    <p class="font-color--light">Musteradresse 123, 00000 Musterort</p>
+                    <p class="font-color--light">Email: <a class="footer__link" href="#">kontakt@nachbarsgarten.de</a></p>
+                    <p class="font-color--light">Tel.: <a class="footer__link" href="#">0123456789</a></p>
+                </div>
+                <div class="footer__widget-column">
+                    <h3 class="font-color--light">Rechtliches</h3>
+                    <p class="font-color--light"><a class="footer__link" href="#">Impressum</a></p>
+                    <p class="font-color--light"><a class="footer__link" href="#">Datenschutz</a></p>
+                </div>
+                <div class="footer__widget-column">
+                    <h3 class="font-color--light">Social Media</h3>
+                    <div class="footer__social">
+                        <a
+                            class="footer__link"
+                            href="#"
+                            aria-label="Nachbarsgarten auf Facebook"
+                        ><i class="fa-brands fa-facebook"></i></a>
+                        <a
+                            class="footer__link"
+                            href="#"
+                            aria-label="Nachbarsgarten auf LinkedIn"
+                        ><i class="fa-brands fa-linkedin"></i></a>
+                        <a
+                            class="footer__link"
+                            href="#"
+                            aria-label="Nachbarsgarten auf Instagram"
+                        ><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+        <script src="src/js/main.js"></script>
+        <script src="src/js/basic.js"></script>
+    </body>
+</html>
